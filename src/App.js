@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import ImageCard from './components/Card';
 import images from './images.json';
+import shuffle from './utils.js'
 
 
 class App extends Component {
     state = {
-        images: images.map(img => ({ ...img, clicked: false })),
+        images: images.map(img => ({ ...img, clicked: false,  })),
         userScore: 0
     };
 
@@ -16,10 +17,14 @@ class App extends Component {
             if (clickImage.clicked === false) {
                 clickImage.clicked = true;
                 state.userScore++;
+                shuffle(state.images);
             } else {
-                state.images.forEach(img => { img.clicked = false });
+                state.images.forEach(img => { 
+                    img.clicked = false;
+                });
                 state.userScore = 0;
             }
+            return state;
         });
     }
 
