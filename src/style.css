@@ -1,0 +1,6 @@
+#image_container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    width: 50%;
+    margin: 2em auto;
+}
