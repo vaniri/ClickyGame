@@ -6,7 +6,7 @@ import shuffle from './utils.js'
 
 class App extends Component {
     state = {
-        images: images.map(img => ({ ...img, clicked: false,  })),
+        images: images.map(img => ({ ...img, clicked: false, shake: false })),
         userScore: 0
     };
 
@@ -16,11 +16,13 @@ class App extends Component {
             let clickImage = state.images[index];
             if (clickImage.clicked === false) {
                 clickImage.clicked = true;
+                state.images.forEach(img => { img.shake = false; });
                 state.userScore++;
                 shuffle(state.images);
             } else {
                 state.images.forEach(img => { 
                     img.clicked = false;
+                    img.shake = true;
                 });
                 state.userScore = 0;
             }
@@ -38,6 +40,7 @@ class App extends Component {
                         index={index}
                         name={image.name}
                         url={image.url}
+                        shake={image.shake}
                     />
                 )}
             </div>
