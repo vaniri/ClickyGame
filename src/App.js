@@ -11,9 +11,9 @@ class App extends Component {
     state = {
         images: images.map(img => ({ ...img, clicked: false, shake: false })),
         userScore: 0,
+        topScore: 0,
         text: ""
     };
-
 
     changeScore = index => {
         this.setState(state => {
@@ -22,7 +22,7 @@ class App extends Component {
                 clickImage.clicked = true;
                 state.images.forEach(img => { img.shake = false; });
                 state.userScore++;
-                state.text = "Correct";
+                if (state.userScore > state.topScore) { state.topScore = state.userScore }
                 shuffle(state.images);
             } else {
                 state.images.forEach(img => {
@@ -30,7 +30,6 @@ class App extends Component {
                     img.shake = true;
                 });
                 state.userScore = 0;
-                state.text = "Incorrect";
             }
             return state;
         });
@@ -41,8 +40,8 @@ class App extends Component {
             <div className="App">
                 <Header />
                 <ScoreBar
-                    text={this.state.text}
                     userscore={this.state.userScore}
+                    topscore={this.state.topScore}
                 />
                 <div id="image_container">
                     {this.state.images.map((image, index) =>

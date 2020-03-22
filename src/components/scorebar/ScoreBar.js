@@ -6,7 +6,7 @@ const ScoreBar = props => {
         <div id="score_bar">
             <ul id="score_list">
             <li className="score">SCORE: {props.userscore}</li>
-            <li className="score">TOP SCORE: {props.text}</li>
+            <li className="score">TOP SCORE: {props.topscore}</li>
             </ul>
         </div>
     )
