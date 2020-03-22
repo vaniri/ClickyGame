@@ -4,7 +4,7 @@ import "./style.css";
 const Header = () => {
     return (
         <div id="header">
-            <h1>Clicky Game!</h1>
+            <h1>CLICKY GAME</h1>
         </div>
     )
 }

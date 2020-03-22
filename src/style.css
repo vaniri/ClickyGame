@@ -1,3 +1,7 @@
+body {
+    background-color: #dddfdd;
+}
+
 #image_container {
     display: grid;
     grid-template-columns: 200px 200px 200px 200px;

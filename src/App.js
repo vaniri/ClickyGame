@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import images from './images.json';
 import shuffle from './utils.js';
-import NavBar from './components/navbar/NavBar';
+import ScoreBar from './components/scorebar/ScoreBar';
 import Header from './components/header/Header';
 import ImageCard from './components/card/Card';
 import './style.css'
@@ -39,11 +39,11 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <NavBar
+                <Header />
+                <ScoreBar
                     text={this.state.text}
                     userscore={this.state.userScore}
                 />
-                <Header />
                 <div id="image_container">
                     {this.state.images.map((image, index) =>
                         <ImageCard
