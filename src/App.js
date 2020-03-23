@@ -11,13 +11,13 @@ class App extends Component {
     state = {
         images: images.map(img => ({ ...img, clicked: false, shake: false })),
         userScore: 0,
-        topScore: 0,
-        text: ""
+        topScore: 0
     };
 
     changeScore = index => {
         this.setState(state => {
             let clickImage = state.images[index];
+       
             if (clickImage.clicked === false) {
                 clickImage.clicked = true;
                 state.images.forEach(img => { img.shake = false; });

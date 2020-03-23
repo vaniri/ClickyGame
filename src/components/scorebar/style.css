@@ -3,21 +3,26 @@
     color: #fff;
     display: block;
     text-align: center;
-    margin: 0.5em;
+    margin: 0.5em 0;
     background-image: url("https://1.bp.blogspot.com/-0aA34oLdcjw/WykMXIFm13I/AAAAAAAgVNM/QgvkPUTL9g4fx2WH9QIDBmnIi6jf_JmnACLcBGAs/s1600/AW1237163_02.gif");
     background-color: tomato;
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
+    /* max-height: 175px; */
 }
 
 #score_list {
+    max-height: 80px;
     align-items: center;
     display: inline-flex;
     list-style-type: none;
-    font-size: 20px;
+    font-size: 35px;
+    font-family: 'Rajdhani', sans-serif;
+    color: lightcyan;
+    font-weight: 500;
 }
 
-.score{
+.score {
     margin: 1.5em;
 }

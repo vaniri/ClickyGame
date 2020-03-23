@@ -10,8 +10,9 @@
     background-position: right;
     background-size: contain;
 }
+
 h1 {
-  background: linear-gradient(to right, #2b1de8, #0099ff,#1ddde8, #6666ff, #6666ff, #00ff00,  #1de840, #ff2400, #e81d1d,  #ff3399, #dd00f3, #dd00f3, #e8b71d, #e3e81d);
+    background: linear-gradient(to right, #2b1de8, #0099ff, #1ddde8, #6666ff, #6666ff, #00ff00, #1de840, #ff2400, #e81d1d, #ff3399, #dd00f3, #dd00f3, #e8b71d, #e3e81d);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -23,13 +24,10 @@ h1 {
 }
 
 @keyframes rainbow_animation {
-    0%,100% {
+    0%, 100% {
         background-position: 0 0;
     }
-
     50% {
         background-position: 100% 0;
     }
 }
-  
-  
